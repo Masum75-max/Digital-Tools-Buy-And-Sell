@@ -7,6 +7,7 @@ import { Suspense, useState } from 'react'
 import './App.css'
 import Products from '../components/Body/Products'
 import Carts from '../components/Body/Carts'
+import { ToastContainer, toast } from 'react-toastify';
 
  const allWorks=async()=>{
    const res= await fetch("/works.json");
@@ -22,19 +23,22 @@ function App() {
    const [selected,setSelected]=useState([]);
 
    function selectedSetter(work){
+
+    toast.success(`${work.name} has been added`)
       const newSelected=[...selected,work]
 
       setSelected(newSelected)
    }
 
    function deleteWork(deletedOne){
-     
+     toast.error(`${deletedOne.name} has been deleted`)
     const newArr= selected.filter(single=>single!=deletedOne)
     setSelected(newArr)
    }
 
 
    function setProceed(){
+    toast.info("You have purchased your items")
         setSelected([])
    }
      
@@ -68,6 +72,7 @@ function App() {
       {
         page==="Carts" && <Carts selected={selected}  deleteWork={deleteWork} setProceed={setProceed}></Carts>
       }
+      <ToastContainer />
     </>
   )
 }
