@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://masum75-max.github.io/Digital-Tools-Buy-And-Sell",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
