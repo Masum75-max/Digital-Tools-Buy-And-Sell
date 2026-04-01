@@ -28,7 +28,7 @@ const Work = ({work,selectedSetter}) => {
     </p>
 
     <div class="flex items-baseline mb-8">
-      <span class="text-3xl font-bold text-slate-800">{work.price}</span>
+      <span class="text-3xl font-bold text-slate-800">$ {work.price}</span>
       <span class="text-slate-400 text-lg ml-1">{work.period=="monthly"?"/MO":"Once"}</span>
     </div>
 
