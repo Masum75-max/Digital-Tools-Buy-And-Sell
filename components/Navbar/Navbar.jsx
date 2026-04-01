@@ -5,7 +5,7 @@ const Navbar = ({selected}) => {
     return (
         <div className='flex justify-between items-center px-10 py-7 shadow-2xl'>
             <h1 className='text-3xl text-fuchsia-800 font-bold'>Digitools</h1>
-            <ul className='flex gap-5'>
+            <ul className='flex gap-5 hidden lg:inline-block'>
                 <li>Products</li>
                 <li>Features</li>
                 <li>Pricing</li>
