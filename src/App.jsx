@@ -9,6 +9,7 @@ import Products from '../components/Body/Products'
 import Carts from '../components/Body/Carts'
 import { ToastContainer, toast } from 'react-toastify';
 import Slides from '../components/Footer/Slides'
+import Ready from '../components/Footer/Ready'
 
  const allWorks=async()=>{
    const res= await fetch("/works.json");
@@ -76,6 +77,7 @@ function App() {
       <ToastContainer />
 
       <Slides></Slides>
+      <Ready></Ready>
     </>
   )
 }
